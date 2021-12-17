@@ -802,7 +802,7 @@ function FihzLib.CreateWindow(libName, logoId)
                                 textboxFrame:TweenSize(UDim2.new(0, 359,0, 30), "InOut", "Quint", 0.18, true)
                                 wait(0.18)
                                 textboxFrame:TweenSize(UDim2.new(0, 365,0, 36), "InOut", "Quint", 0.18, true)
-                                TextBox.Text = "Current Player: "..TextBox.Text  
+                                TextBox.Text = TextBox.Text  
                             end)
                         end
                             function ItemHandling:NumberSlider(slidInfo, minvalue, maxvalue, callback)
