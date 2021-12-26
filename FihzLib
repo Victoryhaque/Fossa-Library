@@ -1,5 +1,4 @@
 -- // UI LIBRARY -- FIHZY HUB // --
-
 local HttpService = game:GetService("HttpService");
 
 local FihzLib = {}
