@@ -1,5 +1,8 @@
 local library = {flags = {}, windows = {}, open = true}
 
+-- Global Table
+_G.Shared = {}
+
 --Services
 local runService = game:GetService"RunService"
 local tweenService = game:GetService"TweenService"
@@ -195,10 +198,8 @@ local function createLabel(option, parent)
 		Parent = parent.content
 	})
 	
-	print(main)
-	print(option)
-	print(option.Text)
-
+	table.insert(_G.Shared,main)
+	
 	setmetatable(option, {__newindex = function(t, i, v)
 		if i == "Text" then
 			main.Text = " " .. tostring(v)
