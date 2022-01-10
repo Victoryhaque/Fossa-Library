@@ -1634,6 +1634,15 @@ function library:Init()
 			loadOptions(window)
 		end
 	end
+
+	inputService.InputBegan:connect(function(input, gameProcessed) 
+        if not gameProcessed then 
+            if input.KeyCode.Name == Enum.KeyCode.RightAlt.Name then 
+                self.base.Enabled = not self.base.Enabled
+            end
+        end
+    end)
+
 end
 
 function library:Close()
