@@ -1,8 +1,5 @@
 local library = {flags = {}, windows = {}, open = true}
 
--- Global Table
-_G.Storage = {}
-
 --Services
 local runService = game:GetService"RunService"
 local tweenService = game:GetService"TweenService"
@@ -58,7 +55,6 @@ function library:Create(class, properties)
 	for property, value in next, properties do
 		inst[property] = value
 	end
-	table.insert(_G.Storage, inst)
 	return inst
 end
 
@@ -199,7 +195,10 @@ local function createLabel(option, parent)
 		Parent = parent.content
 	})
 	
-	
+	print(main)
+	print(option)
+	print(option.Text)
+
 	setmetatable(option, {__newindex = function(t, i, v)
 		if i == "Text" then
 			main.Text = " " .. tostring(v)
